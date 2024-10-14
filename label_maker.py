@@ -19,7 +19,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 # Set CustomTkinter appearance mode and color theme
-ctk.set_appearance_mode("dark")  # Modes: "System" (default), "Dark", "Light"
+ctk.set_appearance_mode("light")  # Modes: "System" (default), "Dark", "Light"
 ctk.set_default_color_theme("green")  # Themes: "blue", "dark-blue", "green"
 
 # Global variable to store label data
@@ -208,7 +208,7 @@ root.geometry("700x700")
 root.configure(bg="#3A3A3A")
 
 # Load the custom icon in .ico format (replace the default CustomTkinter icon)
-icon_path = resource_path('scribe-icon-2.ico')  # Ensure the icon is in .ico format
+icon_path = resource_path('scribe-icon.ico')  # Ensure the icon is in .ico format
 root.iconbitmap(icon_path)  # Set the custom icon for the window
 
 
@@ -238,15 +238,15 @@ canvas.pack(side="left", fill="both", expand=True)
 scrollbar.pack(side="right", fill="y")
 
 # Input fields for manual label entry
-order_name_label = ctk.CTkLabel(root, text="Order Name:", font=("Helvetica", 12), text_color="white")
-order_name_label.pack(pady=10, padx=20, anchor="w")
+order_name_label = ctk.CTkLabel(root, text="Order Name:", font=("Helvetica", 12), text_color="black")
+order_name_label.pack(pady=5, padx=20, anchor="w")
 order_name_entry = ctk.CTkEntry(root, width=300)
-order_name_entry.pack(pady=10, padx=20)
+order_name_entry.pack(pady=5, padx=20)
 
-num_hw_machines_label = ctk.CTkLabel(root, text="Number of HW Machines:", font=("Helvetica", 12), text_color="white")
-num_hw_machines_label.pack(pady=10, padx=20, anchor="w")
+num_hw_machines_label = ctk.CTkLabel(root, text="Number of HW Machines:", font=("Helvetica", 12), text_color="black")
+num_hw_machines_label.pack(pady=5, padx=20, anchor="w")
 num_hw_machines_entry = ctk.CTkEntry(root, width=300)
-num_hw_machines_entry.pack(pady=10, padx=20)
+num_hw_machines_entry.pack(pady=5, padx=20)
 
 # Variable to store selected card/envelope type
 card_envelope_var = ctk.StringVar(value="Envelopes")
