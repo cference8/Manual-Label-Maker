@@ -204,7 +204,7 @@ def reset_labels():
 # Initialize the app
 root = ctk.CTk()
 root.title("Manual Label Maker")
-root.geometry("700x700")
+root.geometry("600x600")
 root.configure(bg="#3A3A3A")
 
 # Load the custom icon in .ico format (replace the default CustomTkinter icon)
